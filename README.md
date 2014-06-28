@@ -7,6 +7,9 @@ based on the statistics of each endpoints from release 3.
 Example queries :
 
 http://queryall.bio2rdf.org/go:0004396
+
 http://queryall.bio2rdf.org/genbank:BC149752
+
 http://queryall.bio2rdf.org/uniprot:A6QQB6
+
 http://queryall.bio2rdf.org/affymetrix:Bt.9225.1.A1_at
