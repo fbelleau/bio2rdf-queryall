@@ -1,0 +1,646 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default">
+  <context confirmationNeeded="false" name="Default">
+    <contextParameter comment="" name="ns" prompt="ns?" promptNeeded="false" type="id_String" value="go"/>
+    <contextParameter comment="" name="id" prompt="id?" promptNeeded="false" type="id_String" value="0004396"/>
+    <contextParameter comment="" name="ntriples" prompt="ntriples?" promptNeeded="false" type="id_String" value="&quot;&quot;"/>
+  </context>
+  <parameters>
+    <elementParameter field="TEXT" name="JOB_RUN_VM_ARGUMENTS" value=" -Xms256M -Xmx1024M"/>
+    <elementParameter field="CHECK" name="JOB_RUN_VM_ARGUMENTS_OPTION" value="false"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="96"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPTIONS" value="none"/>
+    <elementParameter field="TEXT" name="OEM_CUSTOM_ATTRIBUTE" value=""/>
+    <elementParameter field="TEXT" name="HADOOP_APP_PATH" value=""/>
+    <elementParameter field="TEXT" name="JOBID_FOR_OOZIE" value=""/>
+    <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" value=""/>
+    <elementParameter field="TABLE" name="HADOOP_ADVANCED_PROPERTIES"/>
+    <elementParameter field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" value="true"/>
+    <elementParameter field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" value="true"/>
+    <elementParameter field="CHECK" name="MULTI_THREAD_EXECATION" value="false"/>
+    <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" value=""/>
+    <elementParameter field="CHECK" name="DISABLE_WARNINGS" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_INFO" value="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_10"/>
+    <routinesParameter id="_X3F_IPzpEeOizb7i3Ok63A" name="DataOperation"/>
+    <routinesParameter id="_X2rvcPzpEeOizb7i3Ok63A" name="Mathematical"/>
+    <routinesParameter id="_X0y5EPzpEeOizb7i3Ok63A" name="Numeric"/>
+    <routinesParameter id="_X2mP4PzpEeOizb7i3Ok63A" name="Relational"/>
+    <routinesParameter id="_X3LesPzpEeOizb7i3Ok63A" name="StringHandling"/>
+    <routinesParameter id="_X25x4PzpEeOizb7i3Ok63A" name="TalendDataGenerator"/>
+    <routinesParameter id="_X3RlUPzpEeOizb7i3Ok63A" name="TalendDate"/>
+    <routinesParameter id="_X3Y6EPzpEeOizb7i3Ok63A" name="TalendString"/>
+  </parameters>
+  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="96">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFixedFlowInput_1"/>
+    <elementParameter field="CHECK" name="END_OF_FLOW" value="false"/>
+    <elementParameter field="TEXT" name="NB_ROWS" value="1"/>
+    <elementParameter field="RADIO" name="USE_SINGLEMODE" value="false"/>
+    <elementParameter field="TABLE" name="VALUES">
+      <elementValue elementRef="SCHEMA_COLUMN" value="endpoint"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="namespace"/>
+      <elementValue elementRef="VALUE" value=""/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="count"/>
+      <elementValue elementRef="VALUE" value=""/>
+    </elementParameter>
+    <elementParameter field="RADIO" name="USE_INTABLE" value="false"/>
+    <elementParameter field="TABLE" name="INTABLE"/>
+    <elementParameter field="RADIO" name="USE_INLINECONTENT" value="true"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;;&quot;"/>
+    <elementParameter field="MEMO" name="INLINECONTENT" value="endpoint;namespace;count&#xA;affymetrix;omim;17078&#xA;affymetrix;broad.lncrna;3424&#xA;affymetrix;rgap;45570&#xA;affymetrix;affymetrix_vocabulary;66&#xA;affymetrix;interpro;5999&#xA;affymetrix;wormbase;14768&#xA;affymetrix;mgi;18818&#xA;affymetrix;pseudomonas;72&#xA;affymetrix;sgd;6122&#xA;affymetrix;rapdb;12037&#xA;affymetrix;affymetrix;1398141&#xA;affymetrix;ec;1860&#xA;affymetrix;ensembl;889620&#xA;affymetrix;go;22806&#xA;affymetrix;hgnc.symbol;317971&#xA;affymetrix;ncbigene;400798&#xA;affymetrix;tair;22216&#xA;affymetrix;tigr;42311&#xA;affymetrix;unigene;587164&#xA;affymetrix;flybase;40886&#xA;affymetrix;lncrna;107&#xA;affymetrix;rgd;1&#xA;affymetrix;pseudocap;5529&#xA;affymetrix;bgi.ris;11617&#xA;affymetrix;affymetrix_resource;57&#xA;affymetrix;genbank;1202769&#xA;affymetrix;refseq;910251&#xA;affymetrix;uniprot;650640&#xA;affymetrix;mirbase;235&#xA;affymetrix;pmrna;3238&#xA;affymetrix;gi;10107&#xA;affymetrix;gb;34181&#xA;affymetrix;broad.tucp;3390&#xA;biomodels;ec;402&#xA;biomodels;pubmed;504&#xA;biomodels;reactome;249&#xA;biomodels;uniprot;1670&#xA;biomodels;panther.pathway;1&#xA;biomodels;pirsf;7&#xA;biomodels;sce;424&#xA;biomodels;pr;2&#xA;biomodels;tcdb;2&#xA;biomodels;hsa;1&#xA;biomodels;pubchem.substance;22&#xA;biomodels;3dmet;8&#xA;biomodels;biomodels;180168&#xA;biomodels;bto;60&#xA;biomodels;interpro;99&#xA;biomodels;kegg.pathway;87&#xA;biomodels;pato;11&#xA;biomodels;do;6&#xA;biomodels;ensembl;34&#xA;biomodels;kegg.orthology;6&#xA;biomodels;ncbigene;1&#xA;biomodels;cco;9&#xA;biomodels;sbo;18&#xA;biomodels;bind;3&#xA;biomodels;chembl.compound;5&#xA;biomodels;intact;17&#xA;biomodels;kegg.drug;2&#xA;biomodels;sgd;425&#xA;biomodels;mirbase;2&#xA;biomodels;narcis;1&#xA;biomodels;so;2&#xA;biomodels;biomodels_resource;1&#xA;biomodels;mathematical modelling ontology;1&#xA;biomodels;insdc;2&#xA;biomodels;tigr.ath;2&#xA;biomodels;cas;10&#xA;biomodels;chebi;902&#xA;biomodels;go;1100&#xA;biomodels;icd9;7&#xA;biomodels;kegg.compound;593&#xA;biomodels;kegg.reaction;340&#xA;biomodels;psi.mod;7&#xA;biomodels;pubchem.compound;61&#xA;biomodels;taxonomy;61&#xA;biomodels;fma;25&#xA;biomodels;omim;24&#xA;biomodels;cl;4&#xA;biomodels;mi;1&#xA;biomodels;doi;11&#xA;biomodels;eco;364&#xA;biomodels;isbn;1&#xA;biomodels;pw;1&#xA;bioportal;rdf;2&#xA;bioportal;owl;4&#xA;bioportal;obo_vocabulary;899&#xA;bioportal;rdfs;10&#xA;bioportal;go;55554&#xA;bioportal;wikipedia;6879&#xA;bioportal;ec;8437&#xA;bioportal;reactome;58117&#xA;bioportal;kegg;5699&#xA;bioportal;metacyc;10154&#xA;bioportal;rhea;5373&#xA;bioportal;umbbd.enzyme;224&#xA;bioportal;nif.subcellular;265&#xA;bioportal;umbbd.reaction;1251&#xA;bioportal;resid;391&#xA;bioportal;fma;5520&#xA;bioportal;umbbd.pathway;110&#xA;bioportal;unipathway;10&#xA;bioportal;tcdb;18&#xA;bioportal;sabiork;4&#xA;bioportal;phi;38&#xA;bioportal;vz;79&#xA;bioportal;aracyc;2&#xA;bioportal;img;72&#xA;bioportal;interpro;1&#xA;bioportal;corum;22&#xA;bioportal;po;2006&#xA;bioportal;obo;919&#xA;bioportal;fbdv;137&#xA;bioportal;bfo.span;17&#xA;bioportal;psi.mod;1340&#xA;bioportal;pr;36592&#xA;bioportal;chebi;59027&#xA;bioportal;beilstein;8492&#xA;bioportal;chemidplus;9524&#xA;bioportal;gmelin;3404&#xA;bioportal;kegg.compound;10235&#xA;bioportal;nistchemistrywebbook;3109&#xA;bioportal;lipidmaps;1375&#xA;bioportal;citexplore;21170&#xA;bioportal;snap;21&#xA;bioportal;taxonomy;15534&#xA;bioportal;obi;45&#xA;bioportal;pirsf;566&#xA;bioportal;panther;106&#xA;bioportal;so;2193&#xA;bioportal;embl;245148&#xA;bioportal;peroxibase;1&#xA;bioportal;hom;66&#xA;bioportal;eco;304&#xA;bioportal;map;1&#xA;bioportal;ssb;226&#xA;bioportal;uniprot;160946&#xA;bioportal;uniprot.var;56&#xA;bioportal;pdb;131&#xA;bioportal;ecocyc;1&#xA;bioportal;hamap;1&#xA;bioportal;refseq;1&#xA;bioportal;exo;79&#xA;bioportal;tdr;184&#xA;bioportal;synonym;48&#xA;bioportal;ma;3049&#xA;bioportal;tads;628&#xA;bioportal;isbn;7&#xA;bioportal;mailto;4&#xA;bioportal;atmo;223&#xA;bioportal;bspo;178&#xA;bioportal;caro;55&#xA;bioportal;fbql;28&#xA;bioportal;fbcv;823&#xA;bioportal;chembl;6876&#xA;bioportal;pdbechem;1803&#xA;bioportal;reaxys;6357&#xA;bioportal;chebi.submitter;1223&#xA;bioportal;umbbd;311&#xA;bioportal;molbase;294&#xA;bioportal;drugbank;2091&#xA;bioportal;kegg.drug;2161&#xA;bioportal;uspto;2668&#xA;bioportal;hmdb;1197&#xA;bioportal;chemspider;107&#xA;bioportal;pubchem;2&#xA;bioportal;come;90&#xA;bioportal;kegg.glycan;319&#xA;bioportal;webelements;111&#xA;bioportal;ekb;46&#xA;bioportal;b8467;229&#xA;bioportal;ekbe;8&#xA;bioportal;a8467;24&#xA;bioportal;pubmed;4140&#xA;bioportal;pgo;23&#xA;bioportal;wbls;89&#xA;bioportal;po.sf;329&#xA;bioportal;plantsystematics_image_archive;5&#xA;bioportal;cl;2207&#xA;bioportal;sgf;1&#xA;bioportal;scale;1&#xA;bioportal;pato;2466&#xA;bioportal;bto;5448&#xA;bioportal;obo_sf2_po;11&#xA;bioportal;co_125;8&#xA;bioportal;obo_sf_obo;1&#xA;bioportal;obo_sf_go;1&#xA;bioportal;obo-sf2_po;1&#xA;bioportal;uberon;12057&#xA;bioportal;hpo;13461&#xA;bioportal;sep;194&#xA;bioportal;deutschesammlungvonmikroorganismenundzellkulturengmbh;1&#xA;bioportal;mat;339&#xA;bioportal;wbbt;7566&#xA;bioportal;fbbt;8320&#xA;bioportal;xao;1299&#xA;bioportal;evoc;366&#xA;bioportal;sael;55&#xA;bioportal;bfbbt;1&#xA;bioportal;ehdaa;2273&#xA;bioportal;emapa;2737&#xA;bioportal;mfo;4358&#xA;bioportal;mp;10190&#xA;bioportal;zfa;2864&#xA;bioportal;tao;3104&#xA;bioportal;zea;179&#xA;bioportal;aao;1658&#xA;bioportal;evm;10&#xA;bioportal;ddanat;135&#xA;bioportal;fao;91&#xA;bioportal;wbis;1&#xA;bioportal;tgma;1864&#xA;bioportal;gro;238&#xA;bioportal;rex;552&#xA;bioportal;fbsp;6600&#xA;bioportal;cs;1&#xA;bioportal;cas;10&#xA;bioportal;vao;247&#xA;bioportal;ro;35&#xA;bioportal;mesh;4226&#xA;bioportal;umls;15185&#xA;bioportal;icd10;296&#xA;bioportal;epcc;13&#xA;bioportal;icd-o;3&#xA;bioportal;do;10224&#xA;bioportal;meddra;1&#xA;bioportal;mpath;892&#xA;bioportal;mersh;1&#xA;bioportal;icd9;3&#xA;bioportal;fbbi;625&#xA;bioportal;sbo;557&#xA;bioportal;zfin;2828&#xA;bioportal;pto;1494&#xA;bioportal;obo_sf_to;54&#xA;bioportal;eo;513&#xA;bioportal;obo_sf_id;8&#xA;bioportal;obo_sf2_to;1&#xA;bioportal;gramene;1&#xA;bioportal;tto;38705&#xA;bioportal;urn;30406&#xA;bioportal;doi;6&#xA;bioportal;wormbase;1943&#xA;bioportal;wbpaper;1&#xA;bioportal;loinc;13&#xA;bioportal;bs;97&#xA;bioportal;rnamods;105&#xA;bioportal;http;2&#xA;bioportal;ebi;1&#xA;bioportal;ehda;8340&#xA;bioportal;fix;1163&#xA;bioportal;symptom;23&#xA;bioportal;bfo;26&#xA;bioportal;miro;4323&#xA;bioportal;irac;2&#xA;bioportal;idomal;1645&#xA;bioportal;iupac;2&#xA;bioportal;envo;1644&#xA;bioportal;ftt;515&#xA;bioportal;tgn;317&#xA;bioportal;geonames;339&#xA;bioportal;iao;7&#xA;bioportal;ido;8&#xA;bioportal;idoden;6&#xA;bioportal;vo;3&#xA;bioportal;plo;14&#xA;bioportal;vsmo;1&#xA;bioportal;mosbp;1&#xA;bioportal;syoid;1&#xA;bioportal;ato;6135&#xA;bioportal;emap;13731&#xA;bioportal;vfb;3837&#xA;bioportal;flybrain_ndb;220&#xA;bioportal;apo;332&#xA;bioportal;md;2&#xA;bioportal;mi;1035&#xA;bioportal;ro_proposed_relation;1&#xA;bioportal;wbphenotype;2147&#xA;bioportal;mao;166&#xA;bioportal;uo;325&#xA;bioportal;spd;579&#xA;bioportal;abbrev;7&#xA;bioportal;ypo;276&#xA;bioportal;biogrid;1&#xA;bioportal;psi.ms;2226&#xA;bioportal;value-type;11&#xA;bioportal;binary-data-type;5&#xA;bioportal;rs;3521&#xA;bioportal;icd9cm;3322&#xA;bioportal;ncit;7210&#xA;bioportal;snomedct;13283&#xA;bioportal;omim;14053&#xA;bioportal;orphanet;1&#xA;bioportal;pt;28&#xA;bioportal;fyler;257&#xA;bioportal;mgi;10188&#xA;bioportal;nlx;4&#xA;bioportal;nbo;828&#xA;bioportal;pw;1443&#xA;bioportal;psi.mi;15&#xA;bioportal;tair;4469&#xA;bioportal;goeco;22&#xA;bioportal;go.ref;11&#xA;bioportal;caloha;642&#xA;bioportal;kupo;132&#xA;bioportal;vhog;1303&#xA;bioportal;cp;26&#xA;bioportal;aeo;167&#xA;bioportal;efo;620&#xA;bioportal;ehdaa2;2619&#xA;bioportal;sctid;3612&#xA;bioportal;nif.cell;3&#xA;bioportal;goc;1&#xA;bioportal;sao;1&#xA;bioportal;clo;3&#xA;bioportal;dm;132&#xA;bioportal;id;254&#xA;bioportal;intact;45984&#xA;bioportal;17753;1&#xA;bioportal;soy;1835&#xA;bioportal;gaz;521785&#xA;bioportal;mindat-loc;2118&#xA;bioportal;ynprcngeothermalfeaturesdatabase;9100&#xA;bioportal;iso3166-2;2667&#xA;bioportal;iso3166-1;463&#xA;bioportal;globalvolcanismprogram;1494&#xA;bioportal;gnisid;53&#xA;bioportal;incits38;55&#xA;bioportal;seamountcatalog;843&#xA;bioportal;australianantarcticdatacentre;70&#xA;bioportal;worldlakesdatabase;266&#xA;bioportal;wbid;4635&#xA;bioportal;worlddatabaseonprotectedareas;1&#xA;bioportal;wbid`;1&#xA;bioportal;peakbagger;1&#xA;bioportal;icao;472&#xA;bioportal;mindat;1&#xA;bioportal;icaoo;1&#xA;bioportal;wvbid;1&#xA;bioportal;icap;3&#xA;bioportal;gaid;777&#xA;bioportal;galen;436&#xA;bioportal;opencyc;557&#xA;bioportal;miaa;217&#xA;bioportal;bm;241&#xA;bioportal;neuronames;934&#xA;bioportal;nif.grossanatomy;1108&#xA;bioportal;bila.ontology;92&#xA;bioportal;hao;94&#xA;bioportal;bilado;9&#xA;bioportal;xtrodo;7&#xA;bioportal;hsapdv;9&#xA;bioportal;mmusdv;14&#xA;bioportal;oges;22&#xA;bioportal;bils;9&#xA;bioportal;olatdv;1&#xA;bioportal;pdumdv;3&#xA;bioportal;aniseed;14&#xA;bioportal;ogem;2&#xA;bioportal;aba;302&#xA;bioportal;wikipediacategory;7&#xA;bioportal;nif_grossanatomy_retired;10&#xA;bioportal;retired_ehdaa2;133&#xA;bioportal;fma_retired;1&#xA;bioportal;oldneuronames;8&#xA;bioportal;te;1&#xA;bioportal;aeo_retired;3&#xA;bioportal;vhog_retired;3&#xA;bioportal;drerdo;1&#xA;bioportal;emapa_retired;1&#xA;bioportal;nif_organism;2&#xA;bioportal;stid;1&#xA;bioportal;murdoch;1&#xA;bioportal;vsao_retired;1&#xA;bioportal;phenoscape;5&#xA;bioportal;taxrank;59&#xA;bioportal;biopax;2&#xA;bioportal;sio;28&#xA;bioportal;cco;4&#xA;bioportal;ncbigene;44366&#xA;bioportal;ensembl;28935&#xA;bioportal;hgnc;14993&#xA;bioportal;hprd;14477&#xA;bioportal;flybase;3183&#xA;bioportal;sgd;3366&#xA;bioportal;cmo;1775&#xA;bioportal;vt;3332&#xA;bioportal;co;1&#xA;bioportal;genedb;2&#xA;bioportal;imex;734&#xA;bioportal;lsm;469&#xA;bioportal;co_321;176&#xA;bioportal;iwis_traitid;123&#xA;bioportal;iwis_triatid;1&#xA;bioportal;xco;346&#xA;bioportal;mmo;403&#xA;bioportal;casrn;3&#xA;bioportal;rgd;4470&#xA;bioportal;pubchem.compound;1&#xA;bioportal;ctdi;26&#xA;bioportal;inheres;1&#xA;bioportal;wsio_transfer;4&#xA;bioportal;wsio_data;4&#xA;bioportal;wsio_compression;9&#xA;bioportal;atol;1939&#xA;bioportal;pride;1&#xA;bioportal;fypo;2657&#xA;bioportal;mvc;519&#xA;bioportal;soywgr;1&#xA;bioportal;soygro;1&#xA;bioportal;soyto;5&#xA;bioportal;pvp;11&#xA;bioportal;ne1014;6&#xA;bioportal;solcap;9&#xA;bioportal;potato_cooperators;9&#xA;bioportal;voag;1&#xA;bioportal;dis;56&#xA;bioportal;icd10cm;8&#xA;bioportal;mesh_dui;2&#xA;bioportal;gexo;2&#xA;bioportal;rexo;2&#xA;bioportal;vario;378&#xA;bioportal;reto;2&#xA;bioportal;xeo;211&#xA;bioportal;trak;1292&#xA;bioportal;umls_tui;20&#xA;bioportal;umls_tn;20&#xA;bioportal;ogms;8&#xA;bioportal;biotop;1&#xA;bioportal;osics-10;115&#xA;bioportal;tron;965&#xA;bioportal;dermo;3514&#xA;bioportal;radlex;7&#xA;bioportal;pmdermo;2&#xA;bioportal;sbol;28&#xA;bioportal;designterms;167&#xA;bioportal;chmo;2753&#xA;bioportal;opb;1&#xA;bioportal;ndfrt;1&#xA;bioportal;bsa;92&#xA;bioportal;bsd;12&#xA;clinicaltrials;clinicaltrials;13432&#xA;clinicaltrials;clinicaltrials_resource;564951&#xA;clinicaltrials;obi;1&#xA;clinicaltrials;pubmed;18314&#xA;clinicaltrials;clinicaltrials_vocabulary;201&#xA;ctd;ncbigene;297274&#xA;ctd;taxonomy;512&#xA;ctd;kegg;239&#xA;ctd;reactome;119&#xA;ctd;ctd_vocabulary;77&#xA;ctd;mesh;164663&#xA;ctd;go;9105&#xA;ctd;obi;1852830&#xA;ctd;cas;56878&#xA;ctd;omim;3831&#xA;ctd;pubmed;75956&#xA;ctd;ctd_resource;17307111&#xA;dbsnp;gi;111&#xA;dbsnp;refseq;11362&#xA;dbsnp;dbsnp;19711&#xA;dbsnp;genbank;111&#xA;dbsnp;dbsnp_resource;79284&#xA;dbsnp;dbsnp_vocabulary;31&#xA;dbsnp;ncbigene;2779&#xA;dbsnp;taxonomy;1&#xA;drugbank;hgnc;2072&#xA;drugbank;iuphar;310&#xA;drugbank;kegg;2603&#xA;drugbank;ndc;1094&#xA;drugbank;pdb;5189&#xA;drugbank;uniprot;4191&#xA;drugbank;wikipedia;1876&#xA;drugbank;bindingdb;904&#xA;drugbank;chebi;1930&#xA;drugbank;genatlas;1671&#xA;drugbank;genecards;2102&#xA;drugbank;gtp;310&#xA;drugbank;pharmgkb;1637&#xA;drugbank;pubchem.compound;6134&#xA;drugbank;pubchem.substance;6177&#xA;drugbank;uspto;1510&#xA;drugbank;ahfs;275&#xA;drugbank;chemspider;4469&#xA;drugbank;drugbank;11919&#xA;drugbank;drugbank_vocabulary;4289&#xA;drugbank;genbank;3384&#xA;drugbank;gi;2849&#xA;drugbank;pubmed;11802&#xA;drugbank;atc;1479&#xA;drugbank;dpd;980&#xA;drugbank;drugbank_resource;235358&#xA;genage;unigene;296&#xA;genage;genage;1825&#xA;genage;genage_vocabulary;31&#xA;genage;pubmed;2365&#xA;genage;uniprot;38&#xA;genage;taxonomy;8&#xA;genage;hagr;298&#xA;genage;ncbigene;2115&#xA;gendr;gendr_vocabulary;20&#xA;gendr;gendr_resource;497&#xA;gendr;ncbigene;322&#xA;gendr;gendr;149&#xA;gendr;wormbase;1&#xA;gendr;pubmed;119&#xA;gendr;taxonomy;5&#xA;goa;goa_vocabulary;18&#xA;goa;taxonomy;5522&#xA;goa;uniprot;283697&#xA;goa;pdb;215583&#xA;goa;go;21460&#xA;goa;goa_resource;5324422&#xA;goa;pubmed;99332&#xA;goa;eco;20&#xA;hgnc;ccds;29446&#xA;hgnc;pubmed;16672&#xA;hgnc;refseq;36512&#xA;hgnc;rgd;17417&#xA;hgnc;ucsc;21270&#xA;hgnc;vega;24348&#xA;hgnc;hgnc_vocabulary;34&#xA;hgnc;ensembl;56758&#xA;hgnc;hgnc;41789&#xA;hgnc;mgi;17768&#xA;hgnc;ncbigene;34453&#xA;hgnc;omim;14252&#xA;hgnc;uniprot;19603&#xA;homologene;gi;275237&#xA;homologene;ncbigene;275237&#xA;homologene;taxonomy;21&#xA;homologene;homologene;44233&#xA;homologene;refseq;275237&#xA;homologene;homologene_vocabulary;6&#xA;interpro;cazy;87&#xA;interpro;iuphar;173&#xA;interpro;merops;161&#xA;interpro;metacyc;370&#xA;interpro;msd;1241&#xA;interpro;pandit;7242&#xA;interpro;priam;823&#xA;interpro;scop;4045&#xA;interpro;swissprot;38706&#xA;interpro;blocks;5787&#xA;interpro;ec;1523&#xA;interpro;prosite;1383&#xA;interpro;pubmed;26957&#xA;interpro;trembl;3882&#xA;interpro;cath;2582&#xA;interpro;come;194&#xA;interpro;interpro;25988&#xA;interpro;interpro_resource;1&#xA;interpro;interpro_vocabulary;21&#xA;interpro;kegg;1754&#xA;interpro;pdb;53625&#xA;iproclass;gi;95540862&#xA;iproclass;ipi;257120&#xA;iproclass;iproclass;74181441&#xA;iproclass;omim;17916&#xA;iproclass;pfam;14839&#xA;iproclass;refseq;20380489&#xA;iproclass;uniparc;31486979&#xA;iproclass;uniprot;56555610&#xA;iproclass;ensembl;1195975&#xA;iproclass;genbank;68498274&#xA;iproclass;iproclass_vocabulary;16&#xA;iproclass;ncbigene;13878455&#xA;iproclass;pubmed;974573&#xA;iproclass;taxonomy;484101&#xA;iproclass;unigene;506685&#xA;iproclass;go;22789&#xA;iproclass;pdb;247349&#xA;iproclass;pirsf;11766&#xA;irefindex;dip;74728&#xA;irefindex;innatedb;8059&#xA;irefindex;intact;269147&#xA;irefindex;matrixdb;221&#xA;irefindex;mips;16309&#xA;irefindex;mpi.lit;711&#xA;irefindex;flybase;242&#xA;irefindex;irefindex.icrogid;581064&#xA;irefindex;irefindex.irigid;566669&#xA;irefindex;irefindex.rogid;108191&#xA;irefindex;irefindex_vocabulary;24&#xA;irefindex;mi;277&#xA;irefindex;ncbigene;71328&#xA;irefindex;pubmed;66812&#xA;irefindex;taxonomy;2030&#xA;irefindex;uniprot;88312&#xA;irefindex;hprd;1&#xA;irefindex;mpi.imex;468&#xA;irefindex;bind;86152&#xA;irefindex;genbank;34072&#xA;irefindex;pdb;5689&#xA;irefindex;refseq;56098&#xA;irefindex;sgd;819&#xA;irefindex;psi.mi;69&#xA;irefindex;i2d;1&#xA;irefindex;ipi;17&#xA;irefindex;cygd;4841&#xA;irefindex;irefindex.crigid;509835&#xA;irefindex;irefindex.irogid;127056&#xA;irefindex;biogrid;431705&#xA;lsr;lsr;2171&#xA;lsr;miriam;343&#xA;lsr;bio2rdf_vocabulary;1&#xA;lsr;biodbcore;97&#xA;lsr;lsr_vocabulary;1&#xA;mesh;mesh;304848&#xA;mesh;mesh_resource;490&#xA;mesh;mesh_vocabulary;54&#xA;mgi;vega;108930&#xA;mgi;mgi_resource;8&#xA;mgi;mgi_vocabulary;37&#xA;mgi;mgi;135938&#xA;mgi;pubmed;26159&#xA;mgi;genbank;270087&#xA;mgi;refseq;173676&#xA;mgi;trembl;50539&#xA;mgi;mp;7813&#xA;mgi;ensembl;134875&#xA;mgi;uniprot;16171&#xA;ncbigene;refseq;23361886&#xA;ncbigene;genbank;22967664&#xA;ncbigene;ncbigene;15513060&#xA;ncbigene;vega;155421&#xA;ncbigene;pubmed;858399&#xA;ncbigene;unigene;530341&#xA;ncbigene;go;21733&#xA;ncbigene;ncbigene_resource;1377346&#xA;ncbigene;eco;21&#xA;ncbigene;taxonomy;12374&#xA;ncbigene;gi;46027380&#xA;ncbigene;ensembl;888839&#xA;ncbigene;ncbigene_vocabulary;62&#xA;ncbigene;unists;361073&#xA;ndc;ndc_resource;212419&#xA;ndc;ndc;232534&#xA;ndc;ndc_vocabulary;30478&#xA;omim;gi;576766&#xA;omim;hpo;4835&#xA;omim;ordr;2954&#xA;omim;orphanet;7026&#xA;omim;snomedct;4833&#xA;omim;dbsnp;8501&#xA;omim;hgnc.symbol;40937&#xA;omim;icd10;1022&#xA;omim;icd9;820&#xA;omim;img;45&#xA;omim;mgi;12869&#xA;omim;ncbigene;15738&#xA;omim;pubmed;121566&#xA;omim;umls;29602&#xA;omim;do;902&#xA;omim;eom;45&#xA;omim;hprd;12915&#xA;omim;omim;22580&#xA;omim;omim_resource;72722&#xA;omim;omim_vocabulary;90&#xA;orphanet;orphanet_resource;9141&#xA;orphanet;mesh;377&#xA;orphanet;obi;1&#xA;orphanet;umls;275&#xA;orphanet;reactome;300&#xA;orphanet;orphanet;10119&#xA;orphanet;orphanet_vocabulary;1392&#xA;orphanet;meddra;144&#xA;orphanet;omim;3071&#xA;orphanet;ensembl;2051&#xA;orphanet;genatlas;213&#xA;orphanet;hgnc;243&#xA;orphanet;icd10;664&#xA;orphanet;snomedct;587&#xA;orphanet;iuphar;165&#xA;orphanet;uniprot;103&#xA;pharmgkb;pubmed;3724&#xA;pharmgkb;meddra;2397&#xA;pharmgkb;pharmgkb;33757&#xA;pharmgkb;clinicaltrials;516&#xA;pharmgkb;genbank;45&#xA;pharmgkb;ndc;962&#xA;pharmgkb;hgnc;26184&#xA;pharmgkb;hgnc.symbol;26918&#xA;pharmgkb;iuphar.receptor;555&#xA;pharmgkb;modbase;15515&#xA;pharmgkb;omim;16536&#xA;pharmgkb;offsides;438801&#xA;pharmgkb;twosides;4651131&#xA;pharmgkb;pharmgkb_resource;60977&#xA;pharmgkb;pharmgkb_vocabulary;105&#xA;pharmgkb;iuphar.ligand;241&#xA;pharmgkb;kegg;1859&#xA;pharmgkb;uniprot;24738&#xA;pharmgkb;alfred;18220&#xA;pharmgkb;ensembl;19684&#xA;pharmgkb;genatlas;13241&#xA;pharmgkb;go;5478&#xA;pharmgkb;humancyc;13660&#xA;pharmgkb;ncbigene;26757&#xA;pharmgkb;refseq;129699&#xA;pharmgkb;dbsnp;24785215&#xA;pharmgkb;mesh;2861&#xA;pharmgkb;ndfrt;3036&#xA;pharmgkb;snomedct;4310&#xA;pharmgkb;umls;11591&#xA;pharmgkb;atc;1061&#xA;pharmgkb;bindingdb;431&#xA;pharmgkb;ccd;255&#xA;pharmgkb;chebi;1005&#xA;pharmgkb;chemspider;1224&#xA;pharmgkb;dailymed;886&#xA;pharmgkb;dpd;958&#xA;pharmgkb;drugbank;1624&#xA;pharmgkb;pdb;293&#xA;pharmgkb;pubchem.compound;2964&#xA;pharmgkb;pubchem.substance;2633&#xA;pharmgkb;ttd;1334&#xA;pharmgkb;ctd;10729&#xA;pharmgkb;genecards;25844&#xA;pharmgkb;huge;21932&#xA;pharmgkb;mutdb;13524&#xA;sabiork;chebi;2772&#xA;sabiork;kegg.compound;2675&#xA;sabiork;kegg.reaction;1374&#xA;sabiork;pubchem.compound;2483&#xA;sabiork;pubmed;495&#xA;sabiork;bto;238&#xA;sabiork;sabiork.compound;5621&#xA;sabiork;sbo;53&#xA;sabiork;uniprot;2522&#xA;sabiork;sabiork_resource;1&#xA;sabiork;ec;1404&#xA;sabiork;sabiork;4847&#xA;sabiork;taxonomy;712&#xA;sabiork;nonpubmed;4&#xA;sgd;sgd_resource;804991&#xA;sgd;pubmed;15348&#xA;sgd;fprintscan;317&#xA;sgd;panther;4568&#xA;sgd;eco;17&#xA;sgd;chebi;2&#xA;sgd;sgd_vocabulary;88&#xA;sgd;ncbigene;5906&#xA;sgd;goa_vocabulary;5&#xA;sgd;sgd;58653&#xA;sgd;apo;241&#xA;sgd;smart;463&#xA;sgd;ec;875&#xA;sgd;refseq;5831&#xA;sgd;coil;1&#xA;sgd;profilescan;2&#xA;sgd;gene3d;882&#xA;sgd;pfam;2949&#xA;sgd;pir;423&#xA;sgd;prodom;149&#xA;sgd;seg;11090&#xA;sgd;superfamily;740&#xA;sgd;tigr;537&#xA;sgd;go;5087&#xA;sgd;so;1&#xA;sgd;gi;37492&#xA;sider;sider_resource;1163894&#xA;sider;umls;6439&#xA;sider;stitch;2204&#xA;sider;sider;31481&#xA;sider;sider_vocabulary;29&#xA;sider;pubchem.compound;1491&#xA;taxonomy;taxonomy;1112811&#xA;taxonomy;doi;2&#xA;taxonomy;taxonomy_resource;34321&#xA;taxonomy;obi;23&#xA;taxonomy;http;3&#xA;taxonomy;taxonomy_vocabulary;39&#xA;wormbase;wormbase;294910&#xA;wormbase;taxonomy;50836&#xA;wormbase;pubmed;3261&#xA;wormbase;wbphenotype;1778&#xA;wormbase;wormbase_vocabulary;54&#xA;wormbase;eco;13&#xA;wormbase;wormbase_resource;1485747&#xA;wormbase;go;3696"/>
+    <elementParameter field="TEXT" name="LABEL" value="namespace_2_endpoints"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" name="tFixedFlowInput_1">
+      <column comment="" key="false" name="endpoint" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" name="namespace" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" name="count" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tFilterRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="288" posY="96">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFilterRow_1"/>
+    <elementParameter field="CLOSED_LIST" name="LOGICAL_OP" value="&amp;&amp;"/>
+    <elementParameter field="TABLE" name="CONDITIONS">
+      <elementValue elementRef="INPUT_COLUMN" value="namespace"/>
+      <elementValue elementRef="FUNCTION" value=""/>
+      <elementValue elementRef="OPERATOR" value="=="/>
+      <elementValue elementRef="RVALUE" value="context.ns"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="USE_ADVANCED" value="false"/>
+    <elementParameter field="MEMO_JAVA" name="ADVANCED_COND" value="// code sample : use input_row to define the condition.&#xA;// input_row.columnName1.equals(&quot;foo&quot;) ||!(input_row.columnName2.equals(&quot;bar&quot;))&#xA;// replace the following expression by your own filter condition &#xA;input_row.columnName1.equals(input_row.columnName2)&#xA;&#x9;&#x9;&#x9;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" name="tFilterRow_1">
+      <column comment="" key="false" name="endpoint" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" name="namespace" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" name="count" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="FILTER" name="FILTER">
+      <column comment="" key="false" name="endpoint" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" name="namespace" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" name="count" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="REJECT" name="REJECT">
+      <column comment="" key="false" name="endpoint" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" name="namespace" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" name="count" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="480" posY="96">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLogRow_1"/>
+    <elementParameter field="RADIO" name="BASIC_MODE" value="true"/>
+    <elementParameter field="RADIO" name="TABLE_PRINT" value="false"/>
+    <elementParameter field="RADIO" name="VERTICAL" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE" value="true"/>
+    <elementParameter field="RADIO" name="PRINT_LABEL" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" value="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;|&quot;"/>
+    <elementParameter field="CHECK" name="PRINT_HEADER" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_COLNAMES" value="false"/>
+    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" value="false"/>
+    <elementParameter field="TABLE" name="LENGTHS">
+      <elementValue elementRef="SCHEMA_COLUMN" value="endpoint"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="namespace"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="count"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" name="tLogRow_1">
+      <column comment="" key="false" name="endpoint" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" name="namespace" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" name="count" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tReplicate" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="128" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tReplicate_1"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" name="tReplicate_1">
+      <column comment="" key="false" name="endpoint" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" name="namespace" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" name="count" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tHttpRequest" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="288" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tHttpRequest_1"/>
+    <elementParameter field="CHECK" name="SUBTREE_START" value="false"/>
+    <elementParameter field="CHECK" name="END_OF_FLOW" value="false"/>
+    <elementParameter field="TEXT" name="URI" value="&quot;http://beta.bio2rdf.org/&quot;+row6.endpoint+&quot;/describe/nt/&quot;+context.ns+&quot;:&quot;+context.id"/>
+    <elementParameter field="CLOSED_LIST" name="METHOD_CHOSED" value="GET"/>
+    <elementParameter field="FILE" name="POST_PARAMS_FROM_FILE" value=""/>
+    <elementParameter field="CHECK" name="OUT_TO_FILE" value="false"/>
+    <elementParameter field="FILE" name="OUT_FILE_NAME" value=""/>
+    <elementParameter field="TABLE" name="HEADERS"/>
+    <elementParameter field="CHECK" name="NEED_AUTHENTICATION" value="false"/>
+    <elementParameter field="TEXT" name="USR" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PWD" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="LABEL" value="describe_by_endpoint"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" name="tHttpRequest_1">
+      <column comment="" key="false" name="endpoint" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" name="namespace" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" name="count" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="0" name="ResponseContent" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tHttpRequest" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="288" posY="288">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tHttpRequest_2"/>
+    <elementParameter field="CHECK" name="SUBTREE_START" value="false"/>
+    <elementParameter field="CHECK" name="END_OF_FLOW" value="false"/>
+    <elementParameter field="TEXT" name="URI" value="&quot;http://beta.bio2rdf.org/&quot;+row3.endpoint+&quot;/links/nt/&quot;+context.ns+&quot;:&quot;+context.id"/>
+    <elementParameter field="CLOSED_LIST" name="METHOD_CHOSED" value="GET"/>
+    <elementParameter field="FILE" name="POST_PARAMS_FROM_FILE" value=""/>
+    <elementParameter field="CHECK" name="OUT_TO_FILE" value="false"/>
+    <elementParameter field="FILE" name="OUT_FILE_NAME" value=""/>
+    <elementParameter field="TABLE" name="HEADERS"/>
+    <elementParameter field="CHECK" name="NEED_AUTHENTICATION" value="false"/>
+    <elementParameter field="TEXT" name="USR" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PWD" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="LABEL" value="links_by_endpoint"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" name="tHttpRequest_2">
+      <column comment="" key="false" name="endpoint" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" name="namespace" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" name="count" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="0" name="ResponseContent" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="448" posY="288">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLogRow_3"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
+    <elementParameter field="CHECK" name="DUMMY" value="true"/>
+    <elementParameter field="RADIO" name="BASIC_MODE" value="true"/>
+    <elementParameter field="RADIO" name="TABLE_PRINT" value="false"/>
+    <elementParameter field="RADIO" name="VERTICAL" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE" value="true"/>
+    <elementParameter field="RADIO" name="PRINT_LABEL" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" value="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;|&quot;"/>
+    <elementParameter field="CHECK" name="PRINT_HEADER" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_COLNAMES" value="false"/>
+    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" value="false"/>
+    <elementParameter field="TABLE" name="LENGTHS">
+      <elementValue elementRef="SCHEMA_COLUMN" value="endpoint"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="namespace"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="count"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ResponseContent"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" name="tLogRow_3">
+      <column comment="" key="false" name="endpoint" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" name="namespace" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" name="count" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="0" name="ResponseContent" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="448" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLogRow_2"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
+    <elementParameter field="CHECK" name="DUMMY" value="true"/>
+    <elementParameter field="RADIO" name="BASIC_MODE" value="true"/>
+    <elementParameter field="RADIO" name="TABLE_PRINT" value="false"/>
+    <elementParameter field="RADIO" name="VERTICAL" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE" value="true"/>
+    <elementParameter field="RADIO" name="PRINT_LABEL" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" value="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;|&quot;"/>
+    <elementParameter field="CHECK" name="PRINT_HEADER" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_COLNAMES" value="false"/>
+    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" value="false"/>
+    <elementParameter field="TABLE" name="LENGTHS">
+      <elementValue elementRef="SCHEMA_COLUMN" value="endpoint"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="namespace"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="count"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ResponseContent"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" name="tLogRow_2">
+      <column comment="" key="false" name="endpoint" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" name="namespace" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" name="count" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="0" name="ResponseContent" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tJenaReadRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="640" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJenaReadRow_1"/>
+    <elementParameter field="CHECK" name="END_OF_FLOW" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="JENAMODEL" value="tJenaCreateModel_1"/>
+    <elementParameter field="CLOSED_LIST" name="INPUTFORMAT" value="N-TRIPLE"/>
+    <elementParameter field="PREV_COLUMN_LIST" name="RDFCOL" value="ResponseContent"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="import com.hp.hpl.jena.rdf.model.*; import com.hp.hpl.jena.util.FileManager; import java.io.*; import com.hp.hpl.jena.query.* ;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" name="tJenaReadRow_1">
+      <column comment="" key="false" name="endpoint" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" name="namespace" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" name="count" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="0" name="ResponseContent" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tJenaReadRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="640" posY="288">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJenaReadRow_2"/>
+    <elementParameter field="CHECK" name="END_OF_FLOW" value="true"/>
+    <elementParameter field="COMPONENT_LIST" name="JENAMODEL" value="tJenaCreateModel_1"/>
+    <elementParameter field="CLOSED_LIST" name="INPUTFORMAT" value="N-TRIPLE"/>
+    <elementParameter field="PREV_COLUMN_LIST" name="RDFCOL" value="ResponseContent"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="import com.hp.hpl.jena.rdf.model.*; import com.hp.hpl.jena.util.FileManager; import java.io.*; import com.hp.hpl.jena.query.* ;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" name="tJenaReadRow_2">
+      <column comment="" key="false" name="endpoint" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" name="namespace" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" name="count" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+      <column key="false" length="0" name="ResponseContent" nullable="true" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tJenaCreateModel" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="-32">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJenaCreateModel_1"/>
+    <elementParameter field="CHECK" name="START" value="true"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="import com.hp.hpl.jena.rdf.model.*; import com.hp.hpl.jena.util.FileManager; import java.io.*; import com.hp.hpl.jena.query.* ;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+  </node>
+  <node componentName="tPostjob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="416">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostjob_1"/>
+    <elementParameter field="CHECK" name="START" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+  </node>
+  <node componentName="tJenaConstructQuery" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="288" posY="416">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJenaConstructQuery_1"/>
+    <elementParameter field="CHECK" name="END_OF_FLOW" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="JENAMODEL" value="tJenaCreateModel_1"/>
+    <elementParameter field="CLOSED_LIST" name="OUTPUTFORMAT" value="RDF/XML"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;construct {?s ?p ?o} where { ?s ?p ?o .}&quot;"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="import com.hp.hpl.jena.rdf.model.*; import com.hp.hpl.jena.util.FileManager; import java.io.*; import com.hp.hpl.jena.query.* ; import java.util.*;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" name="tJenaConstructQuery_1">
+      <column comment="" key="false" name="rdf" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="448" posY="416">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tLogRow_4"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
+    <elementParameter field="CHECK" name="DUMMY" value="true"/>
+    <elementParameter field="RADIO" name="BASIC_MODE" value="true"/>
+    <elementParameter field="RADIO" name="TABLE_PRINT" value="false"/>
+    <elementParameter field="RADIO" name="VERTICAL" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE" value="true"/>
+    <elementParameter field="RADIO" name="PRINT_LABEL" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" value="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;|&quot;"/>
+    <elementParameter field="CHECK" name="PRINT_HEADER" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_COLNAMES" value="false"/>
+    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" value="false"/>
+    <elementParameter field="TABLE" name="LENGTHS">
+      <elementValue elementRef="SCHEMA_COLUMN" value="rdf"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" name="tLogRow_4">
+      <column comment="" key="false" name="rdf" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tBufferOutput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="640" posY="416">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tBufferOutput_1"/>
+    <elementParameter field="CHECK" name="END_OF_FLOW" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <elementParameter field="CHECK" name="INFORMATION" value="false"/>
+    <elementParameter field="MEMO" name="COMMENT" value=""/>
+    <elementParameter field="CHECK" name="VALIDATION_RULES" value="false"/>
+    <metadata connector="FLOW" name="tBufferOutput_1">
+      <column comment="" key="false" name="rdf" nullable="true" pattern="" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tFixedFlowInput_1" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_1" target="tFilterRow_1">
+    <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
+      <elementValue elementRef="TRACE_COLUMN" value="endpoint"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="namespace"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="count"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
+    <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
+    <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
+    <elementParameter field="TABLE" name="THRESHLODS"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1"/>
+  </connection>
+  <connection connectorName="FILTER" label="row2" lineStyle="0" metaname="FILTER" offsetLabelX="0" offsetLabelY="0" source="tFilterRow_1" target="tLogRow_1">
+    <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
+      <elementValue elementRef="TRACE_COLUMN" value="endpoint"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="namespace"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="count"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
+    <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
+    <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
+    <elementParameter field="TABLE" name="THRESHLODS"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row2"/>
+  </connection>
+  <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tLogRow_1" offsetLabelX="0" offsetLabelY="0" source="tLogRow_1" target="tReplicate_1">
+    <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
+      <elementValue elementRef="TRACE_COLUMN" value="endpoint"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="namespace"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="count"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
+    <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
+    <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
+    <elementParameter field="TABLE" name="THRESHLODS"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row3"/>
+  </connection>
+  <connection connectorName="FLOW" label="row6" lineStyle="0" metaname="tReplicate_1" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tReplicate_1" target="tHttpRequest_1">
+    <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
+      <elementValue elementRef="TRACE_COLUMN" value="endpoint"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="namespace"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="count"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
+    <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
+    <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
+    <elementParameter field="TABLE" name="THRESHLODS"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row6"/>
+  </connection>
+  <connection connectorName="FLOW" label="row7" lineStyle="0" metaname="tReplicate_1" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tReplicate_1" target="tHttpRequest_2">
+    <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
+      <elementValue elementRef="TRACE_COLUMN" value="endpoint"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="namespace"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="count"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
+    <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
+    <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
+    <elementParameter field="TABLE" name="THRESHLODS"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row7"/>
+  </connection>
+  <connection connectorName="FLOW" label="row4" lineStyle="0" metaname="tHttpRequest_1" offsetLabelX="0" offsetLabelY="0" source="tHttpRequest_1" target="tLogRow_2">
+    <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
+      <elementValue elementRef="TRACE_COLUMN" value="endpoint"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="namespace"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="count"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ResponseContent"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
+    <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
+    <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
+    <elementParameter field="TABLE" name="THRESHLODS"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row4"/>
+  </connection>
+  <connection connectorName="FLOW" label="row5" lineStyle="0" metaname="tHttpRequest_2" offsetLabelX="0" offsetLabelY="0" source="tHttpRequest_2" target="tLogRow_3">
+    <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
+      <elementValue elementRef="TRACE_COLUMN" value="endpoint"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="namespace"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="count"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ResponseContent"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
+    <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
+    <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
+    <elementParameter field="TABLE" name="THRESHLODS"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row5"/>
+  </connection>
+  <connection connectorName="FLOW" label="row9" lineStyle="0" metaname="tLogRow_3" offsetLabelX="0" offsetLabelY="0" source="tLogRow_3" target="tJenaReadRow_2">
+    <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
+      <elementValue elementRef="TRACE_COLUMN" value="endpoint"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="namespace"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="count"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ResponseContent"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
+    <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
+    <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
+    <elementParameter field="TABLE" name="THRESHLODS"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row9"/>
+  </connection>
+  <connection connectorName="FLOW" label="row8" lineStyle="0" metaname="tLogRow_2" offsetLabelX="0" offsetLabelY="0" source="tLogRow_2" target="tJenaReadRow_1">
+    <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
+      <elementValue elementRef="TRACE_COLUMN" value="endpoint"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="namespace"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="count"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="ResponseContent"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
+    <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
+    <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
+    <elementParameter field="TABLE" name="THRESHLODS"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row8"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tJenaCreateModel_1" offsetLabelX="0" offsetLabelY="0" source="tJenaCreateModel_1" target="tFixedFlowInput_1">
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk1"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPostjob_1" offsetLabelX="0" offsetLabelY="0" source="tPostjob_1" target="tJenaConstructQuery_1">
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk1"/>
+  </connection>
+  <connection connectorName="FLOW" label="row10" lineStyle="0" metaname="tJenaConstructQuery_1" offsetLabelX="0" offsetLabelY="0" source="tJenaConstructQuery_1" target="tLogRow_4">
+    <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
+      <elementValue elementRef="TRACE_COLUMN" value="rdf"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
+    <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
+    <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
+    <elementParameter field="TABLE" name="THRESHLODS"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row10"/>
+  </connection>
+  <connection connectorName="FLOW" label="row11" lineStyle="0" metaname="tLogRow_4" offsetLabelX="0" offsetLabelY="0" source="tLogRow_4" target="tBufferOutput_1">
+    <elementParameter field="CHECK" name="TRACES_CONNECTION_ENABLE" value="true"/>
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER">
+      <elementValue elementRef="TRACE_COLUMN" value="rdf"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="USEROWLABEL" value="true"/>
+    <elementParameter field="TEXT" name="METTERLABEL" value="&quot;MyLabel&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="ABSOLUTE" value="Absolute"/>
+    <elementParameter field="CONNECTION_LIST" name="CONNECTIONS" value=""/>
+    <elementParameter field="TABLE" name="THRESHLODS"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row11"/>
+  </connection>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFixedFlowInput_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJenaCreateModel_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tPostjob_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="230;100;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;220;180"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJenaConstructQuery_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="160;190;240"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="220;220;250"/>
+  </subjob>
+</talendfile:ProcessType>
